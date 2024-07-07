@@ -38,7 +38,7 @@ conversões dos dados, como:
   `codigo_totalizacao_turno`). Para saber mais detalhes sobre as colunas que
   foram renomeadas, olhe os arquivos no diretório `headers/` (caso você altere
   algum desses arquivos, gere novamente os cabeçalhos finais com
-  `python tse.py headers`).
+  `python3 tse.py headers`).
 
 > Nota: nem todos os códigos/descrição foram normalizados (alguns apresentam
 > inconsistências ainda não resolvidas e serão feitos em breve).
@@ -60,7 +60,7 @@ adicione a opção `--no-censorship` para o script `tse.py`.
 
 ## Instalando
 
-Os programas requerem Python 3.7+. Instale as dependências executando:
+Os programas requerem python3 3.7+. Instale as dependências executando:
 
 ```bash
 pip install -r requirements.txt
@@ -73,11 +73,11 @@ O script `tse.py` baixa, trata e extrai os dados. Basta rodá-lo, passando que
 tipo de dado quer baixar/tratar/extrair:
 
 ```bash
-python tse.py candidatura
-python tse.py bem_declarado
-python tse.py votacao_zona
-python tse.py receita
-python tse.py despesa
+python3 tse.py candidatura
+python3 tse.py bem_declarado
+python3 tse.py votacao_zona
+python3 tse.py receita
+python3 tse.py despesa
 ```
 
 Os dados ficarão disponíveis em:
@@ -105,7 +105,7 @@ Você pode especificar para quais anos deseja a extração (separados por
 vírgulas), como em:
 
 ```bash
-python tse.py candidatura --years=2014,2018
+python3 tse.py candidatura --years=2014,2018
 ```
 
 #### Alterar fonte dos dados
@@ -122,14 +122,14 @@ Para que o script colete os daos usando nosso *mirror*, execute-o com a opção
 `--use-mirror`:
 
 ```bash
-python tse.py candidatura --use-mirror
+python3 tse.py candidatura --use-mirror
 ```
 
 Você pode especificar também a URL base do *mirror*, que por padrão é do
 [Brasil.IO](https://brasil.io/):
 
 ```bash
-python tse.py candidatura --use-mirror --mirror-url=https://data.brasil.io/mirror/eleicoes-brasil/
+python3 tse.py candidatura --use-mirror --mirror-url=https://data.brasil.io/mirror/eleicoes-brasil/
 ```
 
 
@@ -149,7 +149,7 @@ Você pode especificar o arquivo de saída (que será sempre um CSV, mas pode
 estar compactado):
 
 ```bash
-python tse.py candidatura --output=candidatura.csv.gz
+python3 tse.py candidatura --output=candidatura.csv.gz
 ```
 
 #### Observações
